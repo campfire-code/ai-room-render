@@ -1,0 +1,59 @@
+/* AI 装修效果图：只用 kit.css 的变量，适配 6 套布局与亮暗色 */
+.rr { flex: 1; display: flex; flex-direction: column; gap: 12px; min-width: 0; container-type: inline-size; }
+.rr h4 { margin: 14px 0 8px; font-size: 1.02em; }
+.rr h4:first-child { margin-top: 0; }
+.rr-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); }
+.rr-tabs button { height: 36px; padding: 0 14px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); cursor: pointer; font: inherit; }
+.rr-tabs button.on { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+.rr-make { display: grid; grid-template-columns: minmax(300px, 2fr) minmax(0, 3fr); gap: 12px; align-items: start; }
+@container (max-width: 760px) { .rr-make { grid-template-columns: 1fr; } }
+.rr-form, .rr-stage { min-width: 0; padding: 14px; }
+.rr-drop { display: grid; place-items: center; gap: 4px; width: 100%; min-height: 110px; padding: 10px; border: 1.5px dashed var(--line-strong); border-radius: var(--radius); background: var(--bg); color: var(--muted); cursor: pointer; font: inherit; }
+.rr-drop.hover, .rr-drop:hover { border-color: var(--primary); color: var(--primary); }
+.rr-drop img { max-width: 100%; max-height: 120px; border-radius: 4px; }
+.rr-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.rr-grow { flex: 1; }
+.rr-hint { font-size: .9em; }
+.rr-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin-top: 8px; align-items: end; }
+.rr-toggle { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
+.rr-note { margin-top: 8px; padding: 8px 10px; border-radius: var(--radius); font-size: .95em; }
+.rr-note.ok { background: var(--ok-soft); color: var(--ok); }
+.rr-note.err { background: var(--err-soft); color: var(--err); }
+.rr-note.warn { background: var(--warn-soft); color: var(--warn); }
+.rr-mats { display: grid; grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)); gap: 8px; }
+.rr-mat { display: grid; gap: 4px; justify-items: center; padding: 6px; border: 1.5px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; font-size: .86em; line-height: 1.25; }
+.rr-mat img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; }
+.rr-mat span { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; text-align: center; }
+.rr-mat.on { border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-soft); }
+.rr-mat.add { align-content: center; min-height: 92px; color: var(--muted); border-style: dashed; }
+.rr-styles { display: flex; flex-wrap: wrap; gap: 6px; }
+.rr-chip { height: 32px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; }
+.rr-chip.on { background: var(--primary); border-color: var(--primary); color: var(--on-primary); font-weight: 600; }
+.rr-out { display: flex; align-items: center; gap: 8px; margin-top: 12px; min-width: 0; }
+.rr-out code { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; direction: rtl; text-align: left; }
+.rr-go { width: 100%; margin-top: 12px; height: 40px; justify-content: center; }
+.rr-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.rr-compare figure { margin: 0; display: grid; gap: 6px; align-content: start; min-width: 0; }
+.rr-compare figcaption { font-size: .9em; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rr-compare img, .rr-empty { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; border-radius: var(--radius); background: var(--bg); border: 1px solid var(--line); }
+.rr-empty { display: grid; place-content: center; justify-items: center; gap: 6px; color: var(--muted); }
+.rr-shots { display: flex; gap: 8px; margin-top: 10px; overflow-x: auto; }
+.rr-shots button { flex: none; display: grid; gap: 2px; width: 84px; padding: 4px; border: 1.5px solid var(--line); border-radius: var(--radius); background: var(--surface); color: var(--ink); cursor: pointer; font: inherit; font-size: .85em; }
+.rr-shots button.on { border-color: var(--primary); }
+.rr-shots img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px; }
+.rr-sel { width: 130px; }
+.rr-swatch { width: 44px; height: 44px; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); }
+.rr-matlib { display: grid; gap: 12px; }
+.rr-matlib .k-panel, .rr-model, .rr-records { padding: 14px; }
+.rr-matgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 10px; }
+.rr-matcard { display: grid; gap: 4px; padding: 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); align-content: start; }
+.rr-matcard img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; }
+.rr-matcard p { margin: 0; font-size: .9em; color: var(--muted); overflow-wrap: anywhere; }
+.rr-model { display: grid; gap: 4px; max-width: 760px; }
+.rr-rec { border-bottom: 1px solid var(--line); padding: 8px 0; }
+.rr-rec summary { display: flex; justify-content: space-between; gap: 10px; cursor: pointer; flex-wrap: wrap; }
+.rr-rec dl { display: grid; grid-template-columns: 90px 1fr; gap: 4px 10px; margin: 10px 0; }
+.rr-rec dt { color: var(--muted); }
+.rr-rec dd { margin: 0; min-width: 0; }
+.rr-rec pre { margin: 0; white-space: pre-wrap; font: inherit; font-size: .9em; background: var(--chip); padding: 8px; border-radius: var(--radius); }
+.rr-path { overflow-wrap: anywhere; }

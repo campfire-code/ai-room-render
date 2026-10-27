@@ -1,0 +1,13 @@
+{
+  "id": "c35",
+  "slug": "ai-room-render",
+  "name": "AI 装修效果图",
+  "version": "0.1.0",
+  "repo": "campfire-code/ai-room-render",
+  "license": "MIT",
+  "ui": {
+    "layout": "d",
+    "palette": "violet"
+  },
+  "upstream": null
+}
